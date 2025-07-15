@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contact" className="section">
       <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" className="container">
         <h2>Contact Me</h2>
-        <p>I'd love to hear from you! Please fill out the form below:</p>
+        <p data-aos="fade-in" data-aos-delay="200" data-aos-duration="800">I'd love to hear from you! Please fill out the form below:</p>
 
         <form
           name="contact"

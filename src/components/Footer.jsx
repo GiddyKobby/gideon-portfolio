@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" data-aos="fade-in" data-aos-delay="200" data-aos-duration="800">
       <p>© {new Date().getFullYear()} Gideon Osei Acheampong. All rights reserved.</p>
       <p>
         <a href="mailto:gideonkobbyjnr@gmail.com">Email</a> |{" "}

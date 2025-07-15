@@ -3,11 +3,11 @@ import React from "react";
 
 const Education = () => {
   return (
-    <section id="education" className="section">
+    <section id="education" className="section" data-aos="fade-in" data-aos-delay="200" data-aos-duration="800">
       <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" className="container">
         <h2>Education</h2>
 
-        <div className="education-item">
+        <div className="education-item" >
           <h3>Master of Science in Robotics & AI</h3>
           <p>The Catholic University of America — 2025 (Expected)</p>
         </div>
