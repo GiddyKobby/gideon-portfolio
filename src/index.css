@@ -47,3 +47,23 @@ body { margin: 0; font-family: Arial, sans-serif; }
   font-weight: bold;
 }
 
+.section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.education-item {
+  margin-bottom: 30px;
+}
+
+.education-item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.education-item p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
