@@ -9,12 +9,11 @@ const Contact = () => {
         <p data-aos="fade-in" data-aos-delay="200" data-aos-duration="800">I'd love to hear from you! Please fill out the form below:</p>
 
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          action="/thank-you"
-          className="contact-form"
-        >
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  action="/thank-you.html"
+>
           <input type="hidden" name="form-name" value="contact" />
 
           <div>
