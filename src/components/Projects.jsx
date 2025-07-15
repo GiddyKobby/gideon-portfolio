@@ -4,7 +4,7 @@ import React from "react";
 const Projects = () => {
   return (
     <section id="projects" className="section">
-      <div className="container">
+      <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" className="container">
         <h2>Projects</h2>
 
         <div className="project-item">

@@ -4,7 +4,7 @@ import React from "react";
 const Experience = () => {
   return (
     <section id="experience" className="section">
-      <div className="container">
+      <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" className="container">
         <h2>Experience</h2>
 
         <div className="experience-item">

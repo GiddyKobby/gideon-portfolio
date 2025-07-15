@@ -1,21 +1,11 @@
 function Hero() {
   return (
-    <section className="hero">
-      <h1>Hi, I'm Gideon 👋</h1>
-      <h2>Aspiring AI & Robotics Engineer</h2>
-      <p>
-        I design intelligent systems and smart solutions to improve human lives.
-      </p>
+  <div className="hero" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+  <h1>Hello, I’m Gideon</h1>
+  <p>Aspiring Robotics & AI Engineer</p>
+  <a href="/Gideon Acheampong_CV.pdf" download className="download-btn">Download CV</a>
+</div>
 
-      <a
-  href="/Gideon Acheampong_CV.pdf"
-  download
-  className="download-btn"
->
-  Download CV
-</a>
-
-    </section>
   );
 }
 

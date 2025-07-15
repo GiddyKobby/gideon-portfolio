@@ -4,7 +4,7 @@ import React from "react";
 const Contact = () => {
   return (
     <section id="contact" className="section">
-      <div className="container">
+      <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" className="container">
         <h2>Contact Me</h2>
         <p>I'd love to hear from you! Please fill out the form below:</p>
 

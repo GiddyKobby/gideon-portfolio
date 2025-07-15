@@ -4,7 +4,7 @@ import React from "react";
 const Education = () => {
   return (
     <section id="education" className="section">
-      <div className="container">
+      <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" className="container">
         <h2>Education</h2>
 
         <div className="education-item">
