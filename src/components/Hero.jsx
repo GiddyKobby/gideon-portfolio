@@ -6,6 +6,15 @@ function Hero() {
       <p>
         I design intelligent systems and smart solutions to improve human lives.
       </p>
+
+      <a
+  href="/Gideon Acheampong_CV.pdf"
+  download
+  className="download-btn"
+>
+  Download CV
+</a>
+
     </section>
   );
 }

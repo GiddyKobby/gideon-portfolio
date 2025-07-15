@@ -158,3 +158,36 @@ body { margin: 0; font-family: Arial, sans-serif; }
 .contact-form button:hover {
   background-color: #005fa3;
 }
+
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background-color: #218838;
+}
+
+.footer {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #0077cc;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
