@@ -1,38 +1,24 @@
-function Projects() {
-  const projects = [
-    {
-      title: "Smart Attendance System",
-      description: "Uses facial recognition to track student presence in real-time.",
-      link: "#"
-    },
-    {
-      title: "Chatbot for Customer Support",
-      description: "Built with Python and Dialogflow, integrated into a company website.",
-      link: "#"
-    },
-    {
-      title: "Portfolio Website",
-      description: "This very site — built with React and deployed on Netlify.",
-      link: "#"
-    }
-  ];
+// src/components/Projects.jsx
+import React from "react";
 
+const Projects = () => {
   return (
-    <section className="projects">
-      <h2>Projects</h2>
-      <div className="project-grid">
-        {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </a>
-          </div>
-        ))}
+    <section id="projects" className="section">
+      <div className="container">
+        <h2>Projects</h2>
+
+        <div className="project-item">
+          <h3>Portfolio Website</h3>
+          <p>A personal one-page portfolio showcasing my education, experience, and skills. Built with React and deployed using Netlify.</p>
+        </div>
+
+        <div className="project-item">
+          <h3>Student Attendance App</h3>
+          <p>Developed a web app for recording and reporting classroom attendance using Node.js and MongoDB.</p>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Projects;

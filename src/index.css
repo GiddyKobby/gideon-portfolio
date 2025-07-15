@@ -67,3 +67,45 @@ body { margin: 0; font-family: Arial, sans-serif; }
   color: #666;
 }
 
+.experience-item {
+  margin-bottom: 30px;
+}
+
+.experience-item h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.experience-item p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.experience-item ul {
+  padding-left: 20px;
+  color: #444;
+}
+
+.project-item {
+  margin-bottom: 25px;
+}
+
+.project-item h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.project-item p {
+  color: #666;
+}
+
+.skills-list {
+  list-style-type: square;
+  padding-left: 20px;
+  color: #444;
+}
+
+.skills-list li {
+  margin-bottom: 8px;
+}
