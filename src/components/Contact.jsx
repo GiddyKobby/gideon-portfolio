@@ -15,13 +15,33 @@ const Contact = () => {
   action="/thank-you.html"
 >
   <input type="hidden" name="form-name" value="contact" />
-  
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  
-  <button type="submit">Send</button>
+
+  <p>
+    <label>
+      Name: <br />
+      <input type="text" name="name" required />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Email: <br />
+      <input type="email" name="email" required />
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Message: <br />
+      <textarea name="message" required></textarea>
+    </label>
+  </p>
+
+  <p>
+    <button type="submit">Send</button>
+  </p>
 </form>
+
 
       </div>
     </section>
