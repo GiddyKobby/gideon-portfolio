@@ -14,25 +14,15 @@ const Contact = () => {
   data-netlify="true"
   action="/thank-you.html"
 >
-          <input type="hidden" name="form-name" value="contact" />
+  <input type="hidden" name="form-name" value="contact" />
+  
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  
+  <button type="submit">Send</button>
+</form>
 
-          <div>
-            <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" required />
-          </div>
-
-          <div>
-            <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-
-          <div>
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="5" required></textarea>
-          </div>
-
-          <button type="submit">Send Message</button>
-        </form>
       </div>
     </section>
   );
