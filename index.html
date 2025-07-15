@@ -31,11 +31,12 @@
     <div id="root"></div>
     <script type="module" src="./src/main.jsx"></script>
   
-<!-- Netlify detection -->
+<!-- Hidden Netlify form to enable detection -->
 <form name="contact" netlify hidden>
-  <input name="name" />
-  <input name="email" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
   <textarea name="message"></textarea>
 </form>
+
 
 </html>
