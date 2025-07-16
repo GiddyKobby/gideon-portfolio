@@ -233,25 +233,32 @@ footer.footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
+  flex-direction: row;
+  padding: 10px 0;
 }
 
 .footer-links a {
   color: #00aced;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
+  color: #38bdf8;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 400px) {
   .footer-links {
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    gap: 10px;
   }
 }
+
 .app-wrapper {
   display: flex;
   flex-direction: column;
