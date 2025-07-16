@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Education from "./components/Education";
@@ -17,11 +18,11 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <>
+    <div className="app-wrapper">
       <button className="dark-toggle" onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "☀️ Light" : "🌙 Dark"}
       </button>
-
+      <Navbar />
       <Hero />
       <About />
       <Education />
@@ -32,7 +33,7 @@ const App = () => {
       <Footer />
 
       <ScrollToTop />
-    </>
+    </div>
   );
 };
 

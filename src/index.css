@@ -156,12 +156,13 @@ textarea {
 }
 
 .footer {
-  background-color: #0f172a;
-  color: #fff;
+  background-color: #111;
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
+  margin-top: auto;
 }
+
 
 .footer-links {
   margin-top: 0.5rem;
@@ -205,3 +206,54 @@ textarea {
   font-weight: bold;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+}
+
+footer.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 15px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #00aced;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
