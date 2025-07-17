@@ -1,40 +1,55 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./index.css";
 
-const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
+function App() {
   useEffect(() => {
-    document.body.className = darkMode ? "dark" : "";
-  }, [darkMode]);
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
-    <div className="app-wrapper">
-      <button className="dark-toggle" onClick={() => setDarkMode(!darkMode)}>
-        {darkMode ? "☀️ Light" : "🌙 Dark"}
-      </button>
-      <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+    <>
+      <header className="navbar">
+        <div className="logo">Gideon.</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-      <ScrollToTop />
-    </div>
+      <section className="hero" id="home" data-aos="fade-up">
+        <h1>Hello, I'm Gideon</h1>
+        <p>I design and build digital experiences for the web.</p>
+      </section>
+
+      <section className="about" id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>
+          I'm a passionate frontend developer with a love for clean UI and responsive design.
+        </p>
+      </section>
+
+      <section className="projects" id="projects" data-aos="fade-up">
+        <h2>Projects</h2>
+        <div className="grid">
+          <div className="project-card">Project 1</div>
+          <div className="project-card">Project 2</div>
+          <div className="project-card">Project 3</div>
+        </div>
+      </section>
+
+      <section className="contact" id="contact" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <p>Reach out at gideon@example.com or via social media.</p>
+      </section>
+
+      <footer>
+        <p>&copy; {new Date().getFullYear()} Gideon. All rights reserved.</p>
+      </footer>
+    </>
   );
-};
+}
 
 export default App;
