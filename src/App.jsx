@@ -27,7 +27,7 @@ function App() {
       <section className="hero hero-bg" id="home" data-aos="fade-up">
         <div className="overlay">
         <h1>Building Smarter Products with AI and Cloud Technology!</h1>
-        <p>I design and build digital experiences for the web.</p>
+        <p style="color: white;">I design and build digital experiences for the web.</p>
       </div>
       </section>
 
