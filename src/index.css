@@ -89,3 +89,20 @@ footer {
   background: #f4f4f4;
   font-size: 0.9rem;
 }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: #333;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #0072b1; /* LinkedIn Blue for hover effect */
+  transform: scale(1.1);
+}
