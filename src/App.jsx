@@ -136,9 +136,7 @@ function App() {
 </footer>
 
 
-      <footer>
-        <p>&copy; {new Date().getFullYear()} Gideon Osei Acheampong. All rights reserved.</p>
-      </footer>
+      
     </>
   );
 }
