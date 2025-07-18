@@ -1,4 +1,7 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaEnvelope } from "react-icons/fa";
+import ScrollToTopButton from './components/ScrollToTopButton';
+
+
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -21,9 +24,11 @@ function App() {
         </nav>
       </header>
 
-      <section className="hero" id="home" data-aos="fade-up">
+      <section className="hero hero-bg" id="home" data-aos="fade-up">
+        <div className="overlay">
         <h1>Building Smarter Products with AI and Cloud Technology!</h1>
         <p>I design and build digital experiences for the web.</p>
+      </div>
       </section>
 
       <section className="about" id="about" data-aos="fade-up">
@@ -35,14 +40,45 @@ function App() {
         </p>
       </section>
 
-      <section className="projects" id="projects" data-aos="fade-up">
-        <h2>Projects</h2>
-        <div className="grid">
-          <div className="project-card">Project 1</div>
-          <div className="project-card">Project 2</div>
-          <div className="project-card">Project 3</div>
-        </div>
-      </section>
+      <section id="projects" className="projects" data-aos="fade-up">
+  <h2>My Work</h2>
+  <div className="project-grid">
+    <div className="project-card" data-aos="zoom-in">
+      <img src="/project1.jpeg" alt="Portfolio Website" />
+      <h3>Responsive Portfolio</h3>
+      <p>A clean React portfolio website with animations and mobile-friendly design.</p>
+      <div className="buttons">
+        <a href="https://github.com/GiddyKobby/project-1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://giddykobby.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      </div>
+    </div>
+    </div>
+
+    <div className="project-card" data-aos="zoom-in" data-aos-delay="150">
+      <img src="/project2.jpeg" alt="E-commerce App" />
+      <h3>E-Commerce App</h3>
+      <p>A mini store built with React, Stripe, and Firebase. Fully responsive.</p>
+      <div className="buttons">
+        <a href="https://github.com/GiddyKobby/project-2" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://giddykobby.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      </div>
+    </div>
+
+    <div className="project-card" data-aos="zoom-in" data-aos-delay="150">
+  <img 
+    src="https://unsplash.it/800/600?random&gravity=center"
+    alt="Dashboard App" 
+  />
+  <h3>Dashboard App</h3>
+  <p>Admin or analytics dashboard interface with mock data and visuals.</p>
+  <div className="buttons">
+    <a href="https://github.com/GiddyKobby/project-3" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://giddykobby.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo</a>
+  </div>
+</div>
+
+</section>
+
 
       <section className="experience" id="experience" data-aos="fade-up">
         <h2>Experience</h2>
@@ -67,32 +103,38 @@ function App() {
       </section>
 
       <section className="contact" id="contact" data-aos="fade-up">
-        <h2>Contact Me</h2>
-        <div className="social-icons">
-  <a href="https://github.com/GiddyKobby" target="_blank" rel="noreferrer">
-    <FaGithub />
-  </a>
-  <a href="https://linkedin.com/in/gideon-osei-acheampong" target="_blank" rel="noreferrer">
-    <FaLinkedin />
-  </a>
-  <a href="mailto:gideonkobbyjnr@gmail.com">
-    <FaEnvelope />
-  </a>
-  <a href="https://facebook.com/giddy.kobby" target="_blank" rel="noreferrer">
-    <FaFacebook />
-  </a>
-  <a href="https://x.com/giddy_kobby" target="_blank" rel="noreferrer">
-    <FaX />
-  </a>
-  <a href="https://instagram.com/giddy_kobby" target="_blank" rel="noreferrer">
-    <FaInstagram />
-  </a>
-  <a href="https://youtube.com/@giddy_kobby" target="_blank" rel="noreferrer">
-    <FaYoutube />
-  </a>
-</div>
+  <h2>Contact Me</h2>
+  <p>Let’s connect on social media:</p>
+  
+  <div className="social-icons">
+    <a href="https://github.com/GiddyKobby" target="_blank" rel="noreferrer"><FaGithub /> Github</a>
+    <a href="https://linkedin.com/in/gideon-osei-acheampong" target="_blank" rel="noreferrer"><FaLinkedin /> LinkedIn</a>
+    <a href="mailto:gideonkobbyjnr@gmail.com" aria-label="Send email"><FaEnvelope /> Email</a>
+    <a href="https://facebook.com/giddy.kobby" target="_blank" rel="noreferrer"><FaFacebook /> Facebook</a>
+    <a href="https://x.com/giddy_kobby" target="_blank" rel="noreferrer"><FaTwitter /> X</a>
+    <a href="https://instagram.com/giddy_kobby" target="_blank" rel="noreferrer"><FaInstagram /> Instagram</a>
+    <a href="https://youtube.com/@giddy_kobby" target="_blank" rel="noreferrer"><FaYoutube /> YouTube</a>
+  </div>
 
-      </section>
+  <form
+  className="contact-form"
+  action="https://formspree.io/f/xqalaqpd" 
+  method="POST"
+>
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required />
+  <button type="submit">Send Message</button>
+</form>
+
+</section>
+      
+
+      <ScrollToTopButton />
+<footer>
+  <p>&copy; {new Date().getFullYear()} Gideon Osei Acheampong. All rights reserved.</p>
+</footer>
+
 
       <footer>
         <p>&copy; {new Date().getFullYear()} Gideon Osei Acheampong. All rights reserved.</p>
@@ -100,5 +142,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

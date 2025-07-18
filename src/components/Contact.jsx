@@ -1,51 +1,26 @@
-// src/components/Contact.jsx
-import React from "react";
+import React from 'react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="section">
-      <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" className="container">
-        <h2>Contact Me</h2>
-        <p data-aos="fade-in" data-aos-delay="200" data-aos-duration="800">I'd love to hear from you! Please fill out the form below:</p>
+    <form
+      action="https://formspree.io/f/xqalaqpd"
+      method="POST"
+      className="contact-form"
+    >
+      <h2>Let's Work Together</h2>
 
-        <form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  action="/thank-you.html"
->
-  <input type="hidden" name="form-name" value="contact" />
+      <label htmlFor="name">Name</label>
+      <input type="text" name="name" id="name" required />
 
-  <p>
-    <label>
-      Name: <br />
-      <input type="text" name="name" required />
-    </label>
-  </p>
+      <label htmlFor="email">Email</label>
+      <input type="email" name="email" id="email" required />
 
-  <p>
-    <label>
-      Email: <br />
-      <input type="email" name="email" required />
-    </label>
-  </p>
+      <label htmlFor="message">Message</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
 
-  <p>
-    <label>
-      Message: <br />
-      <textarea name="message" required></textarea>
-    </label>
-  </p>
-
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
-
-
-      </div>
-    </section>
+      <button type="submit">Send Message</button>
+    </form>
   );
 };
 
-export default Contact;
+export default ContactForm;
