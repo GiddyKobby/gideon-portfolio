@@ -1,52 +1,140 @@
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaTwitter, FaYoutube, FaEnvelope } from "react-icons/fa";
+import React, { useEffect } from 'react';
+import Navbar from './components/Navbar';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './index.css';
 
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "./index.css";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaEnvelope,
+} from 'react-icons/fa';
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 600, easing: "ease-in-out", once: true });
   }, []);
+  
+  useEffect(() => {
+  const handleScroll = () => {
+    const nav = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   return (
     <>
-    <header className="navbar">
+     <Navbar />
+      
+    {/* <header className="navbar">
       <div className="logo">Gideon Osei Acheampong</div>
         <nav>
           <a href="#about">About</a>
+          <a href="#elevator-pitch">Elevator Pitch</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </nav>
-      </header>
+      </header> */}
 
-      <section className="hero hero-bg" id="home" data-aos="fade-up">
+     <section className="hero hero-bg" id="home" data-aos="fade-up">
         <div className="overlay">
-        <h1>Building Smarter Products with AI and Cloud Technology!</h1>
-         <p style={{color: 'white'}}>I design and build digital experiences for the web.</p>
-      </div>
-      </section>
-
-      <section className="about" id="about" data-aos="fade-up">
-        <h2>About Me</h2>
-        <div className="about-container">
-        <img src="/profile.jpg" alt="Gideon Osei Acheampong" className="profile-pic" />
-      <p>
-          I'm a passionate software developer with a strong foundation in frontend development and a growing expertise in backend systems, driven by a mission to harness technology for a better world. I thrive on building clean, responsive, and user-centered digital experiences that don’t just work, but make a meaningful impact.
-
-What makes me unique is my commitment to using code as a tool for real-world problem-solving, especially in areas like youth opportunity, education, and digital access. Whether it’s designing intuitive interfaces or developing scalable backend logic, I aim to create software that adds real value for users and businesses alike.
-
-I'm always learning, always building, and always embracing new challenges. For me, the sky is just the starting point, and developer is more than a job title. It's how I bring ideas to life, create opportunities for others, and work toward a future where technology serves everyone.
-
-        </p>
+          <h1>Building Smarter Products with AI and Cloud Technology!</h1>
+          <p style={{ color: 'white' }}>
+            I design and build digital experiences for the web.
+          </p>
         </div>
       </section>
 
-<section className="video-section" id="pitch" data-aos="fade-up">
+       <section className="about" id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <div className="about-container">
+          <img
+            src="/profile.jpg"
+            alt="Gideon Osei Acheampong"
+            className="profile-pic"
+          />
+          <p>
+            I'm a passionate software developer with a strong foundation in
+            frontend development and a growing expertise in backend systems,
+            driven by a mission to harness technology for a better world. 
+            I thrive on building clean, responsive, and user-centered digital 
+            experiences that do not just work, but make a meaningful impact.
+            What makes me unique is my commitment to using code as a tool for 
+            real-world problem-solving, especially in areas like youth opportunity, 
+            education, and digital access. Whether it is designing intuitive interfaces 
+            or developing scalable backend logic, I aim to create software that adds real 
+            value for users and businesses alike. I'm always learning, always building, 
+            and always embracing new challenges. For me, the sky is just the starting point, 
+            and developer is more than a job title. It's how I bring ideas to life, create 
+            opportunities for others, and work toward a future where technology serves everyone.
+          </p>
+        </div>
+        <a href="/resume.pdf" download className="btn-resume">
+          📄 Download My Resume
+        </a>
+      </section>
+
+  <section className="skills" id="skills" data-aos="fade-up">
+  <h2>Tech Stack</h2>
+  <p className="skills-intro">Here are the technologies I use regularly to build and deploy web 
+    applications:
+  </p>
+  <ul className="skills-list">
+  {[
+    "HTML5",
+    "CSS3",
+    "JavaScript (ES6+)",
+    "React",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Python",
+    "Django",
+    "Git & GitHub",
+  ].map((tech, index) => (
+    <li key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
+      {tech}
+    </li>
+  ))}
+</ul>
+
+</section>
+
+<section className="portfolio" id="portfolio" data-aos="fade-up">
+   <div className="project-card" data-aos="zoom-in" data-aos-delay="150">
+  <img 
+    src="https://unsplash.it/800/600?random&gravity=center"
+    alt="Dashboard App" 
+  />
+  <h3>Phase 2 Project</h3>
+  <p>Links to Phase 2 Project video on YouTube and Slide Deck.</p>
+  <div className="buttons">
+    <a href="https://youtu.be/Nu_YQZf_s0c" target="_blank" rel="noopener noreferrer">Project Video</a>
+    <a href="https://docs.google.com/presentation/d/1boxXIrNYcFOWzrX6eDJEeDXeyxDBm
+             2wT/edit?usp=sharing&ouid=115545336227503121383&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Project Slide Deck</a>
+  </div>
+</div>
+
+</section>
+
+
+
+<section className="video-section" id="elevator-pitch" data-aos="fade-up">
   <h2>Elevator Pitch</h2>
   <video width="100%" height="auto" controls>
     <source src="/videos/pitch.mp4" type="video/mp4" />
@@ -55,7 +143,7 @@ I'm always learning, always building, and always embracing new challenges. For m
 </section>
 
 
-  <section id="projects" className="projects" data-aos="fade-up">
+<section id="projects" className="projects" data-aos="fade-up">
   <h2>My Work</h2>
   <div className="project-grid">
     <div className="project-card" data-aos="zoom-in">
@@ -95,7 +183,7 @@ I'm always learning, always building, and always embracing new challenges. For m
 </section>
 
 
-      <section className="experience" id="experience" data-aos="fade-up">
+<section className="experience" id="experience" data-aos="fade-up">
         <h2>Experience</h2>
         <div className="experience-item">
           <h3>IT Support Specialist/ Business Relationship Officer</h3>
@@ -115,9 +203,9 @@ I'm always learning, always building, and always embracing new challenges. For m
           </ul>
         </div>
       
-      </section>
+</section>
 
-      <section className="contact" id="contact" data-aos="fade-up">
+<section className="contact" id="contact" data-aos="fade-up">
   <h2>Contact Me</h2>
   <p>Let’s connect on social media:</p>
   
@@ -145,9 +233,11 @@ I'm always learning, always building, and always embracing new challenges. For m
 </section>
       
 
-      <ScrollToTopButton />
+<ScrollToTopButton />
 <footer>
-  <p>&copy; {new Date().getFullYear()} Gideon Osei Acheampong. All rights reserved.</p>
+  <p>
+    &copy; {new Date().getFullYear()} Gideon Osei Acheampong. All rights reserved.
+    </p>
 </footer>
 
 
