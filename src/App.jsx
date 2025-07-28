@@ -46,6 +46,15 @@ I'm always learning, always building, and always embracing new challenges. For m
         </div>
       </section>
 
+<section className="video-section" id="pitch" data-aos="fade-up">
+  <h2>Elevator Pitch</h2>
+  <video width="100%" height="auto" controls>
+    <source src="/videos/pitch.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+
       <section id="projects" className="projects" data-aos="fade-up">
   <h2>My Work</h2>
   <div className="project-grid">
