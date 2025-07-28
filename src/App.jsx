@@ -33,11 +33,17 @@ function App() {
 
       <section className="about" id="about" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>
-          I'm a passionate frontend developer geering toward building backend development, with a love for clean UI and responsive design. 
-          I am continuously expanding my expertise, learning new technologies and embracing new challenges. I believe that, the sky is the 
-          starting point, and the target is to create softwares that not only works, but adds real value for users and businesses alike.
+        <div className="about-container">
+        <img src="/profile.jpg" alt="Gideon Osei Acheampong" className="profile-pic" />
+      <p>
+          I'm a passionate software developer with a strong foundation in frontend development and a growing expertise in backend systems, driven by a mission to harness technology for a better world. I thrive on building clean, responsive, and user-centered digital experiences that don’t just work, but make a meaningful impact.
+
+What makes me unique is my commitment to using code as a tool for real-world problem-solving, especially in areas like youth opportunity, education, and digital access. Whether it’s designing intuitive interfaces or developing scalable backend logic, I aim to create software that adds real value for users and businesses alike.
+
+I'm always learning, always building, and always embracing new challenges. For me, the sky is just the starting point, and developer is more than a job title. It's how I bring ideas to life, create opportunities for others, and work toward a future where technology serves everyone.
+
         </p>
+        </div>
       </section>
 
       <section id="projects" className="projects" data-aos="fade-up">
