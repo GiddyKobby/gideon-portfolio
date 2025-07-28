@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import "../index.css"; 
+import "../index.css"; // Using your central stylesheet
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -13,7 +13,6 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -26,11 +25,14 @@ const Navbar = () => {
   }, []);
 
   return (
-<header className={`navbar ${scrolled ? "scrolled" : ""}`}>
-    <div className="navbar-container">
-        <div className="logo">Gideon Osei Acheampong</div> 
-        
-        {/* desktop Navigation */}
+    <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <div className="navbar-container">
+        {/* Logo */}
+        <div className="logo">
+          <a href="#home">Gideon Osei Acheampong</a>
+        </div>
+
+        {/* Desktop Navigation */}
         <nav className="desktop-menu">
           {navLinks.map((link) => (
             <motion.a
@@ -43,14 +45,17 @@ const Navbar = () => {
             </motion.a>
           ))}
         </nav>
-         
-         {/* Hamburger Icon */}
-      <div className="hamburger-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
-      </div>
-  </div>
 
-      {/* Mobile Menu */}
+        {/* Hamburger Icon */}
+        <div
+          className="hamburger-icon"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+        </div>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -73,49 +78,8 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-</header>
+    </header>
   );
-};s
+};
 
 export default Navbar;
-
-
-// import React, { useState, useEffect } from "react";
-// import "./index.css"; // Optional if you separate CSS
-
-// const Navbar = () => {
-//   const [scrolled, setScrolled] = useState(false);
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrolled(window.scrollY > 50);
-//     };
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-//       <div className="logo">Gideon</div>
-
-//       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-//         <a href="#about" style={{ animationDelay: "0.1s" }}>About</a>
-//         <a href="#projects" style={{ animationDelay: "0.2s" }}>Projects</a>
-//         <a href="#skills" style={{ animationDelay: "0.3s" }}>Skills</a>
-//         <a href="#contact" style={{ animationDelay: "0.4s" }}>Contact</a>
-//       </div>
-
-//       <div
-//         className={`hamburger ${menuOpen ? "open" : ""}`}
-//         onClick={() => setMenuOpen(!menuOpen)}
-//       >
-//         <span></span>
-//         <span></span>
-//         <span></span>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;

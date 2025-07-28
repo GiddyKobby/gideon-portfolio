@@ -576,7 +576,8 @@ footer {
 
 .logo {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .desktop-menu {
@@ -626,6 +627,7 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   .desktop-menu {
@@ -637,3 +639,9 @@ footer {
   }
 }
 
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  color: #fff;
+}
