@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <header className="navbar">
-        <div className="logo">Gideon.</div>
+        <div className="logo">Gideon Osei Acheampong.</div>
         <nav>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -55,7 +55,7 @@ I'm always learning, always building, and always embracing new challenges. For m
 </section>
 
 
-      <section id="projects" className="projects" data-aos="fade-up">
+  <section id="projects" className="projects" data-aos="fade-up">
   <h2>My Work</h2>
   <div className="project-grid">
     <div className="project-card" data-aos="zoom-in">
