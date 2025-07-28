@@ -14,8 +14,8 @@ function App() {
 
   return (
     <>
-      <header className="navbar">
-        <div className="logo">Gideon Osei Acheampong.</div>
+    <header className="navbar">
+      <div className="logo">Gideon Osei Acheampong</div>
         <nav>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -27,7 +27,7 @@ function App() {
       <section className="hero hero-bg" id="home" data-aos="fade-up">
         <div className="overlay">
         <h1>Building Smarter Products with AI and Cloud Technology!</h1>
-        <p style={{color: 'white'}}>I design and build digital experiences for the web.</p>
+         <p style={{color: 'white'}}>I design and build digital experiences for the web.</p>
       </div>
       </section>
 
